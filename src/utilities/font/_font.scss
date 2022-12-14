@@ -1,0 +1,25 @@
+/**
+ * Font
+ */
+
+// Dependencies
+@import 'config/tokens';
+@import 'config/language';
+@import 'config/fonts';
+
+// Declarations
+.font-serif {
+  @if $language == '' {
+    font-family: map-get(map-get($tokens, 'fonts'), 'serif');
+  } @else {
+    font-family: map-get(map-get($tokens, 'fonts'), '#{$language}-serif');
+  }
+}
+
+.font-sans {
+  @if $language == '' {
+    font-family: map-get(map-get($tokens, 'fonts'), 'sans');
+  } @else {
+    font-family: map-get(map-get($tokens, 'fonts'), '#{$language}-sans');
+  }
+}

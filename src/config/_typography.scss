@@ -1,0 +1,123 @@
+//
+// Mixins
+//
+
+// Dependencies
+@import 'config/tokens';
+@import 'config/fonts';
+@import 'config/media';
+@import 'config/direction';
+
+$leading: map-get($tokens, 'leading');
+
+// Declarations
+@mixin typography-jumbo() {
+  font-weight: $font-weight-normal;
+  font-size: #{$font-size-largest};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-serif;
+
+  @media screen and (min-width: $screen-tablet) {
+    font-size: $font-size-jumbo
+  }
+}
+
+@mixin typography-h1() {
+  font-weight: $font-weight-normal;
+  font-size: #{$font-size-larger};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-serif;
+
+  @media screen and (min-width: $screen-tablet) {
+    font-size: $font-size-largest
+  }
+}
+
+@mixin typography-h2() {
+  font-weight: $font-weight-bold;
+  font-size: #{$font-size-larger};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-serif
+}
+
+@mixin typography-h3() {
+  font-weight: $font-weight-bold;
+  font-size: #{$font-size-large};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-serif
+}
+
+@mixin typography-h4() {
+  font-weight: $font-weight-bold;
+  font-size: #{$font-size-medium};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-sans
+}
+
+@mixin typography-h5() {
+  font-weight: $font-weight-normal;
+  font-size: #{$font-size-normal};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-sans
+}
+
+@mixin typography-lead() {
+  font: #{$font-size-normal}/#{map-get($leading, 'medium')} $font-family-serif;
+
+  @media screen and (min-width: $screen-tablet) {
+    font-size: $font-size-larger;
+  }
+}
+
+@mixin typography-exposition() {
+  font-size: #{$font-size-base};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-serif;
+  @media screen and (min-width: $screen-tablet) {
+    font-size: $font-size-larger
+  }
+}
+
+@mixin typography-base() {
+  font-size: #{$font-size-base};
+  line-height: map-get($leading, 'large');
+}
+
+@mixin typography-supplemental() {
+  font-weight: $font-weight-normal;
+  font-size: #{$font-size-normal};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-sans;
+}
+
+@mixin typography-nav() {
+  font-weight: $font-weight-normal;
+  font-size: #{$font-size-small};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-sans;
+  @media screen and (min-width: $screen-tablet) {
+    font-size: $font-size-normal
+  }
+}
+
+@mixin typography-blockquote() {
+  font-size: #{$font-size-large};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-serif;
+}
+
+@mixin typography-program-subheading() {
+  font-weight: $font-weight-normal;
+  font-size: #{$font-size-small};
+  line-height: map-get($leading, 'medium');
+  font-family: $font-family-sans
+}
+
+@mixin typography-dislaimer-small() {
+  font-size: $font-size-xsmall;
+  line-height: map-get($leading, 'large');
+}
+
+@mixin typography-print() {
+  font-size: $font-size-print;
+}

@@ -1,0 +1,81 @@
+{
+  "name": "@nycopportunity/access-patterns",
+  "nice": "ACCESS NYC Patterns",
+  "version": "0.16.1",
+  "description": "ACCESS NYC Pattern library and design system documentation",
+  "author": "NYC Opportunity<products@nycopportunity.nyc.gov>",
+  "license": "GPL-3.0+",
+  "homepage": "https://accesspatterns.cityofnewyork.us",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cityofnewyork/access-nyc-patterns.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cityofnewyork/access-nyc-patterns/issues"
+  },
+  "cdn": {
+    "url": "https://cdn.jsdelivr.net/gh/cityofnewyork/access-nyc-patterns",
+    "source": "https://github.com/cityofnewyork/access-nyc-patterns",
+    "archive": "https://github.com/cityofnewyork/access-nyc-patterns/archive",
+    "styles": "/dist/styles/site-default.css",
+    "styles-ar": "/dist/styles/site-ar.css",
+    "styles-es": "/dist/styles/site-es.css",
+    "styles-ko": "/dist/styles/site-ko.css",
+    "styles-ur": "/dist/styles/site-ur.css",
+    "styles-zh-hant": "/dist/styles/site-zh-hant.css",
+    "tailwindcss": "/dist/styles/tailwindcss.css",
+    "tailwindsass": "/dist/styles/_tailwindcss.scss",
+    "elements": "/dist/styles/elements.css",
+    "components": "/dist/styles/components.css",
+    "objects": "/dist/styles/objects.css",
+    "utilities": "/dist/styles/utilities.css",
+    "scripts": "/dist/scripts/access-nyc.js",
+    "polyfills": "/dist/scripts/polyfills.js",
+    "vue": "/dist/scripts/vue-components.js",
+    "svg": "/dist/svg/icons.svg",
+    "favicon": "/dist/images/favicon.ico"
+  },
+  "src": {
+    "styles": "/src/scss/_imports.scss",
+    "scripts": "/src/js/main.js",
+    "polyfills": "/src/js/polyfills.js",
+    "vue-components": "/src/js/vue-components.js",
+    "vue-demo": "/src/utilities/vue-demo/vue-demo.js"
+  },
+  "svgs": {
+    "primary": "icon-logo-full"
+  },
+  "instantiations": {
+    "scripts": "AccessNyc"
+  },
+  "main": "npm start",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
+    "build": "cross-env NODE_ENV=development pttrn default -np",
+    "production": "cross-env NODE_ENV=production cross-env PORT=7000 concurrently \"pttrn default -w -np\" \"pttrn serve -w\" -p \"none\"",
+    "default": "cross-env NODE_ENV=production pttrn default -np",
+    "version": "npm run default && git add .",
+    "prepublishOnly": "git push && git push --tags",
+    "publish": "cross-env NODE_ENV=production pttrn publish",
+    "pttrn": "node_modules/.bin/pttrn"
+  },
+  "devDependencies": {
+    "@nycopportunity/patterns-framework": "^1.0.0-15",
+    "@rollup/plugin-alias": "^3.1.1",
+    "cross-env": "^7.0.2",
+    "css-mqpacker": "^7.0.0",
+    "rollup-plugin-vue": "^5.1.9",
+    "tailwindcss-logical": "^3.0.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "animate.scss": "0.0.6",
+    "bourbon": "^4.3.4",
+    "cleave.js": "^1.6.0",
+    "for-cerial": "^1.0.0",
+    "js-cookie": "^3.0.0-rc.0",
+    "lodash-es": "^4.17.15",
+    "vue": "^2.6.11",
+    "whatwg-fetch": "^3.0.0"
+  }
+}

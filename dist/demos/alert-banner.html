@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="text-size-0" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="../images/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57" />
+  <link href="../images/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60" />
+  <link href="../images/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
+  <link href="../images/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="../images/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114" />
+  <link href="../images/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="../images/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
+  <link href="../images/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="../images/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="../images/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png" />
+  <link href="../images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+  <link href="../images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+  <link href="../images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+  <meta content="#112E51" name="msapplication-TileColor" />
+  <meta content="../images/ms-icon-144x144.png" name="msapplication-TileImage" />
+  <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="../styles/site-default.css" rel="stylesheet" />
+  <title>Alert Banner Demo</title>
+  <noscript>
+    <style>
+      body {
+        visibility: visible !important;
+      }
+    </style>
+  </noscript>
+  <script type="text/javascript">
+    function load() {
+      document.body.style.visibility = 'visible'
+    };
+  </script>
+</head>
+
+<body onload="load()" style="visibility: hidden;">
+  <main class="min-h-screen bg-white" id="demo-content">
+    <article aria-hidden="false" class="c-alert-banner z-20 bg-status-info animated hidden:fadeInUp active print:hidden" data-alert-name="maintenance" data-js="alert-banner" id="aria-c-alert-banner" role="dialog">
+      <div class="c-alert-banner-wrapper">
+        <div class="c-alert-banner__content">
+          <div class="c-alert-banner__icon">
+            <svg aria-hidden="true" class="c-alert-banner__svg icon-4">
+              <use xlink:href="#icon-info"></use>
+            </svg>
+          </div>
+          <div class="c-alert-banner__body">ACCESS NYC will be undergoing maintenance Friday, February 2nd from 9pm to 11pm EST.</div>
+        </div>
+        <div class="c-alert-banner__closing">
+          <button aria-controls="aria-c-alert-banner" aria-expanded="true" class="text-blue" data-js="alert-controller">
+            <span class="sr-only">close & return to site</span>
+            <svg aria-hidden="true" class="icon-ui icon-3">
+              <use xlink:href="#icon-ui-x"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </article>
+    <div class="min-h-screen min-w-screen flex items-center justify-center flex-col color-mid-background">
+      <button aria-controls="aria-c-alert-banner" aria-expanded="true" class="btn btn-primary mb-4 active" data-js="alert-controller">Toggle Alert Banner</button>
+      <a href="/alert-banner">Back to documentation</a>
+    </div>
+  </main>
+  <footer class="py-4 text-center bg-blue-dark text-white links-invert">
+    <footer class="color-mid-background text-blue-dark border-solid border-t-4 border-blue-dark text-small py-4 z-20 relative" role="contentinfo">
+      <div class="layout-home-body p-2">
+        <div class="screen-tablet:px-2 mb-4">
+          <p class="mb-1">Maintained by&nbsp;</p>
+          <a class="text-blue-dark" href="https://nyc.gov/opportunity">
+            <span class="sr-only">The Mayor's Office for Economic Opportunity</span>
+            <svg class="icon-logo-secondary mb-4" style="height: 53px; width: 300px;">
+              <use xlink:href="#icon-logo-secondary"></use>
+            </svg>
+          </a>
+          <p>We are committed to sharing open source software that we use in our products. Feel free to ask questions and share feedback. Follow @nycopportunity on&nbsp;</p>
+          <div class="mb-4">
+            <nav>
+              <a class="px-1" href="https://github.com/orgs/CityOfNewYork/teams/nycopportunity">GitHub</a>
+              <a class="px-1" href="https://twitter.com/nycopportunity">Twitter</a>
+              <a class="px-1" href="https://www.facebook.com/NYCOpportunity">Facebook</a>
+              <a class="px-1" href="https://www.instagram.com/nycopportunity">Instagram</a>
+            </nav>
+          </div>
+          <small>© City of New York, 2022 All Rights Reserved. NYC is a trademark and service mark of the City of New York.</small>
+        </div>
+      </div>
+      <div class="page-wrapper">
+        <div class="screen-tablet:flex">
+          <nav class="screen-tablet:flex-1 mb-1 px-2">
+            <span class="type-h3 text-small mb-1 block screen-tablet:border-b screen-tablet:pb-2 screen-tablet:mb-1 border-white p-1">Guides</span>
+            <a class="block p-1" href="index">Home</a>
+            <a class="block p-1" href="about">About</a>
+            <a class="block p-1" href="quick-start">Quick Start</a>
+            <a class="block p-1" href="installation">Installation</a>
+            <a class="block p-1" href="developer-tools">Developer Tools</a>
+            <a class="block p-1 screen-tablet:border-b screen-tablet:pb-2 screen-tablet:mb-1 border-white p-1" href="prototyping">Prototyping</a>
+            <span class="type-h3 text-small mb-1 block screen-tablet:border-b screen-tablet:pb-2 screen-tablet:mb-1 border-white p-1">Collections</span>
+            <a class="block p-1" href="covid-response">COVID Response</a>
+            <a class="block p-1 screen-tablet:border-b screen-tablet:pb-2 screen-tablet:mb-1 border-white p-1" href="covid-scenarios">COVID Scenarios</a>
+            <span class="type-h3 text-small mb-1 block screen-tablet:border-b screen-tablet:pb-2 screen-tablet:mb-1 border-white p-1">Links</span>
+            <a class="block p-1" href="https://www.npmjs.com/package/access-nyc-patterns">NPM Package</a>
+            <a class="block p-1" href="https://github.com/CityOfNewYork/access-nyc-patterns">GitHub Repository</a>
+          </nav>
+          <nav class="screen-tablet:flex-1 mb-1 px-2 screen-desktop:ps-4">
+            <span class="type-h3 text-small mb-1 block screen-tablet:border-b screen-tablet:pb-2 screen-tablet:mb-1 border-white p-1">Elements</span>
+            <a class="block p-1" href="badge">Badge</a>
+            <a class="block p-1" href="buttons">Buttons</a>
+            <a class="block p-1" href="checkboxes">Checkboxes</a>
+            <a class="block p-1" href="dividers">Dividers</a>
+            <a class="block p-1" href="inputs">Inputs</a>
+            <a class="block p-1" href="icons">Icons</a>
+            <a class="block p-1" href="layouts">Layouts</a>
+            <a class="block p-1" href="links">Links</a>
+            <a class="block p-1" href="lists">Lists</a>
+            <a class="block p-1" href="nav">Nav</a>
+            <a class="block p-1" href="radios">Radios</a>
+            <a class="block p-1" href="tables">Tables</a>
+            <a class="block p-1" href="tooltips">Tooltips</a>
+            <a class="block p-1" href="toggles">Toggles</a>
+            <a class="block p-1" href="selects">Selects</a>
+          </nav>
+          <nav class="screen-tablet:flex-1 mb-1 px-2 screen-desktop:ps-4">
+            <span class="type-h3 text-small mb-1 block screen-tablet:border-b screen-tablet:pb-2 screen-tablet:mb-1 border-white p-1">Components</span>
+            <a class="block p-1" href="accordion">Accordion</a>
+            <a class="block p-1" href="alert-box">Alert Box</a>
+            <a class="block p-1" href="card">Card</a>
+            <a class="block p-1" href="checklist">Checklist</a>
+            <a class="block p-1" href="disclaimer">Disclaimer</a>
+            <a class="block p-1" href="filter">Filter</a>
+            <a class="block p-1" href="header">Header</a>
+            <a class="block p-1" href="member-list">Member List</a>
+            <a class="block p-1" href="nearby-stops">Nearby Stops</a>
+            <a class="block p-1" href="share-form">Share Form</a>
+            <a class="block p-1" href="share-links">Share Links</a>
+            <a class="block p-1" href="side-nav">Side Nav</a>
+            <a class="block p-1" href="question">Question</a>
+            <a class="block p-1" href="web-share">Web Share</a>
+          </nav>
+          <nav class="screen-tablet:flex-1 mb-1 px-2 screen-desktop:ps-4">
+            <span class="type-h3 text-small mb-1 block screen-tablet:border-b screen-tablet:pb-2 screen-tablet:mb-1 border-white p-1">Objects</span>
+            <a class="block p-1" href="alert-banner">Alert Banner</a>
+            <a class="block p-1" href="announcements">Announcements</a>
+            <a class="block p-1" href="banner">Banner</a>
+            <a class="block p-1" href="card-list">Card Lists</a>
+            <a class="block p-1" href="come-back-later">Come Back Later</a>
+            <a class="block p-1" href="content">Content</a>
+            <a class="block p-1" href="emails">Emails</a>
+            <a class="block p-1" href="footer">Footer</a>
+            <a class="block p-1" href="formstack">Formstack</a>
+            <a class="block p-1" href="mobile-nav">Mobile Nav</a>
+            <a class="block p-1" href="navigation">Navigation</a>
+            <a class="block p-1" href="newsletter">Newsletter</a>
+            <a class="block p-1" href="search-box">Search Box</a>
+            <a class="block p-1" href="text-controller">Text Controller</a>
+          </nav>
+          <nav class="screen-tablet:flex-1 mb-1 px-2 screen-desktop:ps-4">
+            <span class="type-h3 text-small mb-1 block screen-tablet:border-b screen-tablet:pb-2 screen-tablet:mb-1 border-white p-1">Utilities</span>
+            <a class="block p-1" href="animate">Animate</a>
+            <a class="block p-1" href="clearfix">Clearfix</a>
+            <a class="block p-1" href="color">Color</a>
+            <a class="block p-1" href="font">Fonts</a>
+            <a class="block p-1" href="language">Language</a>
+            <a class="block p-1" href="margin">Margin</a>
+            <a class="block p-1" href="media">Media</a>
+            <a class="block p-1" href="padding">Padding</a>
+            <a class="block p-1" href="tailwindcss">tailwindcss</a>
+            <a class="block p-1" href="text">Text</a>
+            <a class="block p-1" href="toggle">Toggle</a>
+            <a class="block p-1" href="typography">Typography</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </footer>
+  <script src="../scripts/polyfills.js"></script>
+  <script src="../scripts/access-nyc.js"></script>
+  <script type="text/javascript">
+    var access = new AccessNyc();
+    access.icons('../icons.svg');
+    access.toggle();
+  </script>
+  <script type="text/javascript">
+    access.alertBanner();
+  </script>
+</body>
+
+</html>

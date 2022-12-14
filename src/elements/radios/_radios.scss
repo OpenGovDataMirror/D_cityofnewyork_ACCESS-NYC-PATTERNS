@@ -1,0 +1,42 @@
+/**
+ * Radios
+ */
+
+// Dependencies
+@import 'config/direction';
+@import 'config/options';
+@import 'config/radios';
+@import 'config/dimensions';
+@import 'config/fonts';
+@import 'config/colors';
+@import 'config/accessibility';
+@import 'config/media';
+
+// Declarations
+.radio {
+  @include options;
+
+  &:last-of-type {
+    margin-bottom: 0
+  }
+
+  > input {
+    @include sr-only()
+  }
+}
+
+.radio__label {
+  @include options-labels;
+}
+
+input + .radio__label::before {
+  @include radios-btn;
+}
+
+input:checked + .radio__label::before {
+  @include radios-btn-checked;
+}
+
+input:focus + .radio__label::before {
+  @include radios-btn-focused;
+}

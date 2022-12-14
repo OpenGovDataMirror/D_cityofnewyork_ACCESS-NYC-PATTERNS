@@ -1,0 +1,115 @@
+/**
+ * Typography
+ */
+
+// Dependencies
+@import 'config/fonts';
+@import 'config/dimensions';
+
+@import 'scss/functions/rem';
+@import 'scss/functions/strip-units';
+
+@import 'config/typography';
+@import 'bourbon/app/assets/stylesheets/addons/margin';
+
+// Declarations
+html {
+  font-family: sans-serif;
+  @include typography-base();
+
+  @if $text-direction == 'rtl' {
+    direction: rtl;
+  }
+}
+
+body {
+  font-family: $font-family-sans
+}
+
+h1, .h1, .type-h1, .typography-h1 {
+  @include typography-h1();
+
+  margin-top: 0;
+  margin-bottom: rem($spacing-base, $em-base);
+}
+
+h2, .h2, .type-h2, .typography-h2 {
+  @include typography-h2();
+
+  margin-top: 0;
+  margin-bottom: rem($spacing-base, $em-base);
+}
+
+h3, .h3, .type-h3, .typography-h3 {
+  @include typography-h3();
+
+  margin-top: 0;
+  margin-bottom: rem($spacing-base, $em-base);
+}
+
+h4, .h4, .type-h4, .typography-h4 {
+  @include typography-h4();
+
+  margin-top: 0;
+  margin-bottom: rem($spacing-base, $em-base);
+}
+
+h5, .h5, .type-h5, .typography-h5 {
+  @include typography-h5();
+
+  margin-top: 0;
+  margin-bottom: rem($spacing-base, $em-base);
+}
+
+small, .small .type-small, .typography-small {
+  @include typography-dislaimer-small();
+
+  margin-top: 0;
+  margin-bottom: rem($spacing-base, $em-base);
+}
+
+blockquote, .blockquote, .type-blockquote, .typography-blockquote {
+  @include typography-blockquote();
+
+  margin-top: rem((.5 * $spacing-base), $em-base);
+  margin-bottom: rem((1.5 * $spacing-base), $em-base);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.exposition, .type-exposition, .typography-exposition {
+  @include typography-exposition();
+
+  margin-bottom: $spacing-base * 2 !important;
+}
+
+.jumbo, .type-jumbo, .typography-jumbo {
+  @include typography-jumbo();
+}
+
+.supplemental, .type-supplemental, .typography-supplemental {
+  @include typography-supplemental();
+}
+
+html {
+  $text-increment: 2;
+  $min-text-step: -3;
+  $max-text-step: 3;
+
+  @for $i from $min-text-step through $max-text-step {
+    &.text-size-#{$i} {
+      font-size: #{$em-base + ($text-increment * $i)}px;
+    }
+  }
+}
+
+ul, ol, li, p {
+  margin-top: 0;
+  margin-bottom: rem(strip-units($spacing-base), $em-base);
+}
+
+@media print {
+  html {
+    @include typography-print();
+  }
+}

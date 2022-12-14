@@ -1,0 +1,24 @@
+/**
+ * Language
+ */
+
+// Dependencies
+@import 'config/tokens';
+@import 'config/direction';
+@import 'config/media';
+
+// Declarations
+@mixin text($variant: '') {
+// @responsive {
+  .#{$variant}text-start {
+    text-align: $text-direction-start !important
+  }
+
+  .#{$variant}text-end {
+    text-align: $text-direction-end !important
+  }
+}
+
+@include screens {
+  @include text($variant);
+}

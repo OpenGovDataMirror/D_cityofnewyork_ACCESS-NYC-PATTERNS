@@ -1,0 +1,137 @@
+//
+// Variables
+//
+
+// Dependencies
+@import 'config/tokens';
+@import 'config/colors';
+@import 'config/fonts';
+@import 'config/dimensions';
+@import 'config/direction';
+@import 'config/typography';
+
+// Declaration
+$btn-radius: 5px;
+
+@mixin btn-reset() {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  overflow: visible;
+}
+
+@mixin btn-normal() {
+  @include typography-h4();
+  line-height: 1;
+  padding: (.6666 * $spacing-base) $spacing-base;
+}
+
+@mixin btn() {
+  @include btn-normal();
+
+  appearance: none;
+  background-color: $color-blue-light;
+  border: 0;
+  border-radius: $btn-radius;
+
+  // display: inline-block;
+  display: inline-flex;
+  align-items: center;
+
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s ease-in, color .2s ease-in;
+
+  > [class*='icon']:first-child {
+    // vertical-align: middle;
+    margin-#{$text-direction-end}: $grid-base;
+  }
+}
+
+@mixin btn-color($c: white, $bg: blue, $smooth: true, $important: null) {
+  $c: map-get($colors, $c);
+  $bg: map-get($colors, $bg);
+
+  color: $c $important;
+  background-color: $bg $important;
+
+  @if $smooth {
+    @include font-smooth;
+  }
+
+  &:link,
+  &:visited {
+    color: $c $important;
+    background-color: $bg $important;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $c $important;
+    background-color: saturate(lighten($bg, 5%), 5%) $important;
+  }
+}
+
+@mixin btn-primary($important: null) {
+  @include btn-color(white, blue, true, $important);
+}
+
+@mixin btn-secondary($important: null) {
+  @include btn-color(white, green-mid, true, $important);
+}
+
+@mixin btn-tertiary($important: null) {
+  @include btn-color(blue-dark, yellow-access, false, $important);
+}
+
+@mixin btn-covid-response($important: null) {
+  @include btn-color(white, covid-response, true, $important);
+}
+
+@mixin btn-next() {
+  position: relative;
+  padding-#{$text-direction-end}: $spacing-base + 16px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+
+    border-bottom: .3em solid transparent;
+    border-#{$text-direction-start}: .4em solid;
+    border-#{$text-direction-start}-color: inherit;
+    border-top: .3em solid transparent;
+
+    top: 50%;
+    margin-top: -.3em;
+    margin-#{$text-direction-end}: $spacing-base;
+    #{$text-direction-end}: -.3em;
+  }
+}
+
+@mixin btn-previous() {
+  position: relative;
+  padding-#{$text-direction-start}: $spacing-base + 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+
+    border-bottom: .3em solid transparent;
+    border-#{$text-direction-end}: .4em solid;
+    border-#{$text-direction-end}-color: inherit;
+    border-top: .3em solid transparent;
+
+    top: 50%;
+    margin-top: -.3em;
+    margin-#{$text-direction-start}: $spacing-base;
+    #{$text-direction-start}: -.3em;
+  }
+}

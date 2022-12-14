@@ -1,0 +1,1 @@
+Using the `.text-start` or `.text-end` will align text content based on the reading direction of the stylesheet language.
